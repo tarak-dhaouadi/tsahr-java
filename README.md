@@ -17,10 +17,11 @@ A stand-alone desktop and command-line application, **no R needed**, that runs t
 
 Needs only a Java runtime (11 or later).
 
+1. Download `tsahr-java.jar` from the [Releases](https://github.com/tarak-dhaouadi/tsahr-java/releases) page.
+2. Double-click the JAR, or run:
+
 ```
-java -jar tsahr-java.jar                 # opens the desktop application
-java -jar tsahr-java.jar --help          # command-line mode
-java -jar tsahr-java.jar --data HR_meta.xlsx --target-hr 0.80 --plot chart.png
+java -jar tsahr-java.jar
 ```
 
 Command-line options carry the names of the `tsa_hr()` arguments:
