@@ -1,8 +1,8 @@
-# tsahr-java 0.1.1 — Trial Sequential Analysis for meta-analyses of hazard ratios (Java edition of tsahr)
+# tsahr-java — Trial Sequential Analysis for meta-analyses of hazard ratios (Java edition of tsahr)
 
 A stand-alone desktop and command-line application, **no R needed**, that runs the same analysis as
 **`tsa_hr()`** in the R package [tsahr](https://github.com/tarak-dhaouadi/tsahr) (this edition mirrors
-**tsahr 0.2.8.18**).
+**tsahr**).
 
 * Schoenfeld required-events formula, generalised for unequal allocation
 * Diversity (D²) heterogeneity adjustment (Wetterslev et al. 2009) → DARIS
