@@ -47,6 +47,9 @@ Parity release: follows **tsahr 0.2.8.18** (0.1.0 followed tsahr 0.2.8.17).
   `build.sh` and runs the engine parity test (against the frozen RTSA 0.2.2 reference) and the regression test on
   Java 11, 17 and 21, across Ubuntu, Windows and macOS. The Java 11 build is uploaded as the `tsahr-java-jar`
   artifact. (verify)
+- **Release workflow** (`.github/workflows/release.yaml`): publishing a GitHub Release builds `tsahr-java.jar`, runs the
+  tests, and attaches the JAR to that release, so users can download it from the Releases page. It can also be run
+  manually for an existing tag.
 - `.gitattributes`: consistent LF line endings (shell scripts always LF), and the bundled `.xlsx` example data
   treated as binary.
 - `CITATION.cff`: citation metadata, also enabling GitHub's *Cite this repository* button.
