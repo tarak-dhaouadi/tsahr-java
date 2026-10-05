@@ -1,0 +1,50 @@
+name: check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-test:
+    name: Java ${{ matrix.java }} on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { os: ubuntu-latest,  java: '11' }
+          - { os: ubuntu-latest,  java: '17' }
+          - { os: ubuntu-latest,  java: '21' }
+          - { os: windows-latest, java: '11' }
+          - { os: windows-latest, java: '21' }
+          - { os: macos-latest,   java: '21' }
+
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v5
+
+      - name: Set up Java ${{ matrix.java }}
+        uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: ${{ matrix.java }}
+
+      # Builds out/tsahr-java.jar (JDK only, no dependencies), then runs the engine parity test
+      # against the frozen RTSA 0.2.2 reference and the regression test (headless).
+      - name: Build and test
+        shell: bash
+        run: bash ./build.sh test
+
+      # The Java 11 build runs on every newer Java, so one JAR is enough.
+      - name: Upload the JAR
+        if: matrix.os == 'ubuntu-latest' && matrix.java == '11'
+        uses: actions/upload-artifact@v6
+        with:
+          name: tsahr-java-jar
+          path: out/tsahr-java.jar
+          if-no-files-found: error

@@ -1,0 +1,69 @@
+cff-version: 1.2.0
+message: "If you use tsahr-java in your work, please cite it using the metadata below. If you use the boundary engine, please also cite RTSA (see references)."
+type: software
+title: "tsahr-java: Trial Sequential Analysis for hazard ratios (Java edition of tsahr)"
+abstract: >-
+  A stand-alone desktop and command-line application (no R required) that runs
+  the same analysis as tsa_hr() in the R package tsahr: Schoenfeld required
+  events with diversity (D2) adjustment and DARIS, O'Brien-Fleming-type alpha-
+  and beta-spending boundaries from an RTSA-derived recursive-integration
+  engine, random-effects tau2 estimators with standard or HKSJ inference,
+  historical-rate projection, and the TSA chart. This edition mirrors tsahr
+  0.2.8.18.
+version: 0.1.1
+date-released: "2026-10-05"
+license: GPL-2.0-or-later
+repository-code: "https://github.com/tarak-dhaouadi/tsahr-java"
+url: "https://github.com/tarak-dhaouadi/tsahr-java"
+authors:
+  - family-names: Dhaouadi
+    given-names: Tarak
+keywords:
+  - trial sequential analysis
+  - meta-analysis
+  - hazard ratio
+  - required information size
+  - alpha-spending
+  - futility boundary
+  - Java
+references:
+  - type: software
+    title: "tsahr: Trial Sequential Analysis for hazard ratios (R package)"
+    version: 0.2.8.18
+    authors:
+      - family-names: Dhaouadi
+        given-names: Tarak
+    license: GPL-2.0-or-later
+    repository-code: "https://github.com/tarak-dhaouadi/tsahr"
+    notes: "Reference implementation that tsahr-java follows."
+  - type: software
+    title: "RTSA: Trial Sequential Analysis (R package)"
+    version: 0.2.2
+    authors:
+      - family-names: Soerensen
+        given-names: Anne Lyngholm
+      - family-names: Olsen
+        given-names: Markus Harboe
+      - family-names: Lange
+        given-names: Theis
+      - family-names: Gluud
+        given-names: Christian
+    license: GPL-2.0-or-later
+    url: "https://cran.r-project.org/package=RTSA"
+    notes: "Source of the recursive-integration boundary engine ported in tsahr-java."
+  - type: article
+    title: "Estimating required information size by quantifying diversity in random-effects model meta-analyses"
+    authors:
+      - family-names: Wetterslev
+        given-names: Jørn
+      - family-names: Thorlund
+        given-names: Kristian
+      - family-names: Brok
+        given-names: Jesper
+      - family-names: Gluud
+        given-names: Christian
+    journal: "BMC Medical Research Methodology"
+    volume: 9
+    start: 86
+    year: 2009
+    doi: "10.1186/1471-2288-9-86"
