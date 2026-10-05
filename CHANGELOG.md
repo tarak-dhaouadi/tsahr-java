@@ -57,6 +57,7 @@ Parity release: follows **tsahr 0.2.8.18** (0.1.0 followed tsahr 0.2.8.17).
 
 ### Documentation
 
+- The README gained status / licence / Java-version badges and a screenshot of the application (`docs/screenshot.png`).
 - `LICENSE` and `COPYRIGHTS-tsahr.txt` were converted to Markdown (`LICENSE.md`, `COPYRIGHTS-tsahr.md`). The GPL
   text is unchanged; the README and source comments point to the new file names.
 

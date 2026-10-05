@@ -1,5 +1,9 @@
 # tsahr-java — Trial Sequential Analysis for meta-analyses of hazard ratios (Java edition of tsahr)
 
+[![check](https://img.shields.io/github/actions/workflow/status/tarak-dhaouadi/tsahr-java/check.yaml?branch=main&label=check&logo=github)](https://github.com/tarak-dhaouadi/tsahr-java/actions/workflows/check.yaml)
+[![License: GPL (≥ 2)](https://img.shields.io/badge/License-GPL%20(%E2%89%A5%202)-blue.svg)](LICENSE.md)
+[![Java 11+](https://img.shields.io/badge/Java-11%2B-orange.svg)](https://adoptium.net/)
+
 A stand-alone desktop and command-line application, **no R needed**, that runs the same analysis as
 **`tsa_hr()`** in the R package [tsahr](https://github.com/tarak-dhaouadi/tsahr) (this edition mirrors
 **tsahr**).
@@ -12,6 +16,8 @@ A stand-alone desktop and command-line application, **no R needed**, that runs t
   (`standard`, `hksj`/`knha`, `hksj_adhoc`/`knha_adhoc`)
 * Historical-rate projection of the additional events/studies needed
 * The TSA chart (cumulative Z-curve, alpha / futility / naive boundaries, DARIS markers)
+
+![tsahr-java: the desktop application showing the TSA chart for the 20-study example, with the data and settings panel on the left](docs/screenshot.png)
 
 ## Run it
 
